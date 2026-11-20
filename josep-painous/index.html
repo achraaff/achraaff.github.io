@@ -161,6 +161,28 @@ section.blk{padding:120px 0}
 .map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
 @media (max-width:900px){.contact{grid-template-columns:1fr}}
 
+html.tabs .page{display:none}
+body .marq .t[lang="es"]{display:none}
+html[data-lang="es"] body .marq .t[lang="ca"]{display:none}
+html[data-lang="es"] body .marq .t[lang="es"]{display:flex}
+html.tabs .page.on{display:block;animation:pgIn .6s cubic-bezier(.2,.7,.2,1)}
+@keyframes pgIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.links a[aria-current="page"]{color:var(--paper)}
+.tabs-m{display:none}
+@media (max-width:900px){.tabs-m{display:flex;gap:6px;overflow-x:auto;padding:10px 20px 2px;scrollbar-width:none}.tabs-m::-webkit-scrollbar{display:none}.tabs-m a{flex:0 0 auto;text-decoration:none;font-size:14px;color:var(--stone2);border:1px solid var(--line);border-radius:999px;padding:9px 16px;min-height:40px;display:inline-flex;align-items:center}.tabs-m a[aria-current="page"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}}
+.quick{padding:90px 0 110px}
+.qgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.q{display:flex;flex-direction:column;gap:10px;text-decoration:none;border:1px solid var(--line);border-radius:var(--r);padding:28px;background:var(--ink2);position:relative;transition:border-color .3s,transform .4s}
+.q:hover{border-color:#555;transform:translateY(-4px)}
+.q b{font-family:Outfit,sans-serif;font-weight:400;font-size:28px}
+.q>span:not(.eyebrow){color:var(--stone2);font-size:15px}
+.q i{position:absolute;right:26px;top:24px;font-style:normal;font-size:22px;color:var(--stone2)}
+@media (max-width:760px){.qgrid{grid-template-columns:1fr}}
+.plans-light{background:var(--white);border-color:#D9D5CE;color:var(--ink)}
+.plans-light p{color:#5B5752}
+.plans-light .btn-light{background:var(--ink);color:var(--paper)}
+section#inbody{padding-top:110px}
+section#contacte{padding-top:110px}
 footer{border-top:1px solid var(--line);padding:44px 0 34px;margin-top:40px}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;font-size:13px;color:var(--stone)}
 .foot img{height:84px}
@@ -180,10 +202,11 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;margin-top:40px}
         <span>Josep Painous<small>Nutrició i Esport</small></span>
       </a>
       <div class="links">
-        <a class="hide-m" href="#serveis"><span lang="ca">Serveis</span><span lang="es">Servicios</span></a>
-        <a class="hide-m" href="#equip"><span lang="ca">Equip</span><span lang="es">Equipo</span></a>
-        <a class="hide-m" href="#inbody">InBody</a>
-        <a class="hide-m" href="#contacte"><span lang="ca">Contacte</span><span lang="es">Contacto</span></a>
+        <a class="hide-m" href="#inici" data-tab="inici"><span lang="ca">Inici</span><span lang="es">Inicio</span></a>
+        <a class="hide-m" href="#serveis" data-tab="serveis"><span lang="ca">Serveis</span><span lang="es">Servicios</span></a>
+        <a class="hide-m" href="#equip" data-tab="equip"><span lang="ca">Equip</span><span lang="es">Equipo</span></a>
+        <a class="hide-m" href="#inbody" data-tab="inbody">InBody</a>
+        <a class="hide-m" href="#contacte" data-tab="contacte"><span lang="ca">Contacte</span><span lang="es">Contacto</span></a>
         <div class="lang" role="group" aria-label="Idioma">
           <button type="button" data-l="ca" aria-pressed="true">CA</button><span aria-hidden="true">/</span><button type="button" data-l="es" aria-pressed="false">ES</button>
         </div>
@@ -191,9 +214,13 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;margin-top:40px}
       </div>
     </nav>
   </div>
+  <nav class="tabs-m" aria-label="Seccions">
+    <a href="#inici" data-tab="inici"><span lang="ca">Inici</span><span lang="es">Inicio</span></a><a href="#serveis" data-tab="serveis"><span lang="ca">Serveis</span><span lang="es">Servicios</span></a><a href="#equip" data-tab="equip"><span lang="ca">Equip</span><span lang="es">Equipo</span></a><a href="#inbody" data-tab="inbody">InBody</a><a href="#contacte" data-tab="contacte"><span lang="ca">Contacte</span><span lang="es">Contacto</span></a>
+  </nav>
 </header>
 
 <main id="inici">
+<div class="page" id="p-inici" data-page="inici">
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
@@ -230,12 +257,28 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;margin-top:40px}
 </section>
 
 <div class="marq" aria-hidden="true">
-  <div class="t">
+  <div class="t" lang="ca">
     <span>Nutrició <i>·</i> Entrenament personal <i>·</i> Fisioteràpia <i>·</i> Rehabilitació <i>·</i> Anàlisi InBody <i>·</i> Condició física <i>·</i></span>
     <span>Nutrició <i>·</i> Entrenament personal <i>·</i> Fisioteràpia <i>·</i> Rehabilitació <i>·</i> Anàlisi InBody <i>·</i> Condició física <i>·</i></span>
   </div>
+  <div class="t" lang="es">
+    <span>Nutrición <i>·</i> Entrenamiento personal <i>·</i> Fisioterapia <i>·</i> Rehabilitación <i>·</i> Análisis InBody <i>·</i> Condición física <i>·</i></span>
+    <span>Nutrición <i>·</i> Entrenamiento personal <i>·</i> Fisioterapia <i>·</i> Rehabilitación <i>·</i> Análisis InBody <i>·</i> Condición física <i>·</i></span>
+  </div>
 </div>
 
+<section class="blk quick">
+  <div class="wrap">
+    <div class="qgrid">
+      <a class="q rv" href="#serveis"><span class="eyebrow">01</span><b><span lang="ca">Serveis</span><span lang="es">Servicios</span></b><span lang="ca">Nutrició, entrenament, fisioteràpia i InBody.</span><span lang="es">Nutrición, entrenamiento, fisioterapia e InBody.</span><i aria-hidden="true">→</i></a>
+      <a class="q rv" href="#equip"><span class="eyebrow">02</span><b><span lang="ca">Equip</span><span lang="es">Equipo</span></b><span lang="ca">Coneix en Josep i l'Álvaro.</span><span lang="es">Conoce a Josep y a Álvaro.</span><i aria-hidden="true">→</i></a>
+      <a class="q rv" href="#contacte"><span class="eyebrow">03</span><b><span lang="ca">Contacte</span><span lang="es">Contacto</span></b><span lang="ca">Pg. Maragall 315 · WhatsApp i e-mail.</span><span lang="es">Pg. Maragall 315 · WhatsApp y e-mail.</span><i aria-hidden="true">→</i></a>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="page" id="p-serveis" data-page="serveis">
 <section class="blk" id="serveis">
   <div class="wrap">
     <div class="head">
@@ -314,7 +357,21 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;margin-top:40px}
     </div>
   </div>
 </section>
+<section class="blk" style="padding-top:0;background:var(--paper)" >
+  <div class="wrap">
+    <div class="plans plans-light rv">
+      <div>
+        <h2><span lang="ca">Preus i <em class="s">plans</em></span><span lang="es">Precios y <em class="s">planes</em></span></h2>
+        <p><span lang="ca">Consultes individuals o en parella, bons d'entrenament i sessions de fisioteràpia. Escriu-nos i t'enviem els preus actualitzats.</span><span lang="es">Consultas individuales o en pareja, bonos de entrenamiento y sesiones de fisioterapia. Escríbenos y te enviamos los precios actualizados.</span></p>
+      </div>
+      <a class="btn btn-light" href="https://wa.me/34603040417" target="_blank" rel="noopener"><span lang="ca">Demana preus</span><span lang="es">Pide precios</span>
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    </div>
+  </div>
+</section>
+</div>
 
+<div class="page" id="p-equip" data-page="equip">
 <section class="blk" id="equip">
   <div class="wrap">
     <div class="head">
@@ -354,8 +411,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;margin-top:40px}
     </div>
   </div>
 </section>
+</div>
 
-<section class="blk" id="inbody" style="padding-top:0">
+<div class="page" id="p-inbody" data-page="inbody">
+<section class="blk" id="inbody">
   <div class="wrap">
     <div class="inbody rv">
       <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1745329532598-aba00d5d09fa?auto=format&fit=crop&w=1600&q=80')"></div>
@@ -373,20 +432,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;margin-top:40px}
   </div>
 </section>
 
-<section class="blk" style="padding-top:0">
-  <div class="wrap">
-    <div class="plans rv">
-      <div>
-        <h2><span lang="ca">Preus i <em class="s">plans</em></span><span lang="es">Precios y <em class="s">planes</em></span></h2>
-        <p><span lang="ca">Consultes individuals o en parella, bons d'entrenament i sessions de fisioteràpia. Escriu-nos i t'enviem els preus actualitzats.</span><span lang="es">Consultas individuales o en pareja, bonos de entrenamiento y sesiones de fisioterapia. Escríbenos y te enviamos los precios actualizados.</span></p>
-      </div>
-      <a class="btn btn-light" href="https://wa.me/34603040417" target="_blank" rel="noopener"><span lang="ca">Demana preus</span><span lang="es">Pide precios</span>
-        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    </div>
-  </div>
-</section>
+</div>
 
-<section class="blk" id="contacte" style="padding-top:20px">
+<div class="page" id="p-contacte" data-page="contacte">
+<section class="blk" id="contacte">
   <div class="wrap contact">
     <div class="cinfo rv">
       <div class="eyebrow"><span lang="ca">Contacte</span><span lang="es">Contacto</span></div>
@@ -401,6 +450,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;margin-top:40px}
     </div>
   </div>
 </section>
+</div>
 </main>
 
 <footer>
@@ -421,11 +471,16 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;margin-top:40px}
   function setLang(l){h.setAttribute('data-lang',l);h.setAttribute('lang',l);document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l?'true':'false')});try{localStorage.setItem('jp-lang',l)}catch(e){}}
   document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.l)})});
   try{var s=localStorage.getItem('jp-lang');if(s)setLang(s)}catch(e){}
+  var pages={inici:1,serveis:1,equip:1,inbody:1,contacte:1};
+  h.classList.add("tabs");
+  function show(id,scroll){if(!pages[id])id="inici";document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("on",p.dataset.page===id)});document.querySelectorAll("[data-tab]").forEach(function(a){if(a.dataset.tab===id)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});var t=document.querySelector(".tabs-m [aria-current]");if(t&&t.scrollIntoView)t.scrollIntoView({block:"nearest",inline:"center"});if(scroll)window.scrollTo(0,0);document.querySelectorAll(".page.on .rv").forEach(function(e){e.classList.remove("in");if(window.__io)window.__io.observe(e)})}
+  window.addEventListener("hashchange",function(){show(location.hash.slice(1),true)});
+  show(location.hash.slice(1),false);
   function onS(){hd.classList.toggle('scrolled',window.scrollY>20)}
   window.addEventListener('scroll',onS,{passive:true});onS();
   var els=document.querySelectorAll('.rv');
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  var io=window.__io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
