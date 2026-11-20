@@ -54,6 +54,7 @@ html{scroll-behavior:smooth}
   #servicios{padding-bottom:64px !important}
   #contacto{padding-top:64px !important}
 }
+.langsw{display:flex;align-items:center;gap:2px;font-size:14px;color:#6A6A6A}.langsw button{background:none;border:0;color:#8A8A8A;font:inherit;font-weight:600;cursor:pointer;padding:10px 4px;min-height:44px}.langsw button[aria-pressed="true"]{color:#FFFFFF}
 </style>
 </head>
 <body>
@@ -66,6 +67,7 @@ html{scroll-behavior:smooth}
 <a href="#trabajos" style="text-decoration: none; color: #CFCFCF">Trabajos</a>
 <a href="#proceso" style="text-decoration: none; color: #CFCFCF">Cómo trabajo</a>
 <a href="#servicios" style="text-decoration: none; color: #CFCFCF">Servicios</a>
+<div class="langsw" role="group" aria-label="Idioma"><button type="button" data-l="es" aria-pressed="true">ES</button><span aria-hidden="true">/</span><button type="button" data-l="ca" aria-pressed="false">CA</button></div>
 <a class="cta" href="#contacto" style="text-decoration: none; background-color: #B3262B; color: #FFFFFF; padding: 12px 22px; border-radius: 999px; font-weight: 600">Hablemos</a>
 </div>
 </nav>
@@ -170,7 +172,7 @@ Disponible para nuevos proyectos · Barcelona
 
 <section id="servicios" style="background-color: #FFFFFF; color: #0B0B0B; padding: 140px 0 96px; overflow: hidden">
 <div style="max-width: 1320px; margin: 0 auto; padding: 0 32px; display: flex; flex-direction: column; gap: 56px">
-<h2 class="drift" style="margin: 0; font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(56px, 9vw, 140px); line-height: 0.95; text-transform: uppercase; white-space: nowrap">Servicios <span style="color: #9E1F24">✦</span> Servicios <span style="color: #9E1F24">✦</span> Servicios</h2>
+<h2 class="drift" data-i18n-html="servicios" style="margin: 0; font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(56px, 9vw, 140px); line-height: 0.95; text-transform: uppercase; white-space: nowrap">Servicios <span style="color: #9E1F24">✦</span> Servicios <span style="color: #9E1F24">✦</span> Servicios</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px">
 <div class="reveal" style="flex: 0 1 380px; min-width: 0; border: 2px solid #0B0B0B; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
 <div aria-hidden="true" style="align-self: flex-start; padding: 6px 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; visibility: hidden">Más pedido</div>
@@ -240,7 +242,7 @@ Disponible para nuevos proyectos · Barcelona
 
 <section id="contacto" style="max-width: 1320px; margin: 0 auto; padding: 96px 32px 80px; display: flex; flex-direction: column; gap: 48px">
 <p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #CFCFCF">¿Tienes un negocio o una idea?</p>
-<h2 style="margin: 0; font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(60px, 13.5vw, 220px); line-height: 0.88; text-transform: uppercase; white-space: nowrap">¿H<span style="color: #B3262B">a</span>bl<span style="color: #B3262B">a</span>m<span style="color: #B3262B">o</span>s?</h2>
+<h2 style="margin: 0; font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(60px, 13.5vw, 220px); line-height: 0.88; text-transform: uppercase; white-space: nowrap" data-i18n-html="hablamos">¿H<span style="color: #B3262B">a</span>bl<span style="color: #B3262B">a</span>m<span style="color: #B3262B">o</span>s?</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 16px">
 <a class="cta" href="https://wa.me/34641790885" target="_blank" rel="noopener" style="text-decoration: none; background-color: #B3262B; color: #FFFFFF; padding: 22px 36px; border-radius: 999px; font-weight: 600; font-size: 18px">WhatsApp · +34 641 79 08 85</a>
 <a class="ghost" href="mailto:achrafboua@gmail.com" style="text-decoration: none; border: 1px solid #3A3A3A; color: #FFFFFF; padding: 22px 36px; border-radius: 999px; font-weight: 600; font-size: 18px">achrafboua@gmail.com</a>
@@ -254,5 +256,22 @@ Disponible para nuevos proyectos · Barcelona
 </div>
 </footer>
 </div>
+<script>
+(function(){
+var T={"Trabajos": "Treballs", "Cómo trabajo": "Com treballo", "Servicios": "Serveis", "Hablemos": "Parlem", "Disponible para nuevos proyectos · Barcelona": "Disponible per a nous projectes · Barcelona", "Webs que": "Webs que", "llenan": "omplen", "tu": "la teva", "agenda.": "agenda.", "Diseño webs y sistemas de reserva para todo tipo de negocios, del local de la esquina a la empresa que quiere crecer. Rápidas, claras y hechas a medida de lo que necesitas.": "Dissenyo webs i sistemes de reserva per a tota mena de negocis, del local de la cantonada a l'empresa que vol créixer. Ràpides, clares i fetes a mida del que necessites.", "Ver trabajos": "Veure treballs", "Contactar": "Contactar", "Estudio de Pilates": "Estudi de Pilates", "Web con horarios de clases, tarifas y reserva online para un estudio de pilates en Horta.": "Web amb horaris de classes, tarifes i reserva en línia per a un estudi de pilates a Horta.", "Reservas": "Reserves", "Horarios": "Horaris", "Ver demo en vivo": "Veure la demo en directe", "Próximamente": "Properament", "Un nuevo proyecto está en marcha. Muy pronto podrás verlo aquí.": "Un nou projecte està en marxa. Molt aviat el podràs veure aquí.", "¿Tu negocio aquí?": "El teu negoci aquí?", "Te hago una demo gratis": "Et faig una demo gratis", "Cómo": "Com", "trabajo": "treballo", "Hablamos": "En parlem", "Me cuentas cómo funciona tu negocio y qué te quita tiempo: llamadas, reservas, dudas repetidas.": "M'expliques com funciona el teu negoci i què et treu temps: trucades, reserves, dubtes repetits.", "Te enseño una demo": "T'ensenyo una demo", "Antes de pagar nada, ves tu web funcionando con tus horarios, tus fotos y tus precios.": "Abans de pagar res, veus la teva web funcionant amb els teus horaris, les teves fotos i els teus preus.", "La publicamos": "La publiquem", "Dominio, Google Maps y reservas listos. Y si algo cambia, lo actualizo yo.": "Domini, Google Maps i reserves a punt. I si canvia alguna cosa, l'actualitzo jo.", "Servicios ✦ Servicios ✦ Servicios": "Serveis ✦ Serveis ✦ Serveis", "Más pedido": "El més demanat", "Una página clara con servicios, horarios, ubicación y botón de WhatsApp.": "Una pàgina clara amb serveis, horaris, ubicació i botó de WhatsApp.", "desde 390 €": "des de 390 €", "Web + reservas": "Web + reserves", "Todo lo anterior más un sistema para que tus clientes reserven solos, a cualquier hora.": "Tot l'anterior més un sistema perquè els teus clients reservin sols, a qualsevol hora.", "desde 500 €": "des de 500 €", "Mantenimiento": "Manteniment", "Cambios de horarios, precios o fotos cuando lo necesites, sin preocuparte de nada.": "Canvis d'horaris, preus o fotos quan ho necessitis, sense preocupar-te de res.", "desde 20 €/mes": "des de 20 €/mes", "Sujeto a demanda": "Segons demanda", "A tu medida.": "A la teva mida.", "¿No encaja ningún plan? Elige lo que quieras de cada uno o pídeme lo que necesites: tranquil@, tú pide que yo cumplo. Lo hablamos y te paso un presupuesto cerrado.": "No t'encaixa cap pla? Tria el que vulguis de cadascun o demana'm el que necessitis: tranquil·la, tu demana que jo compleixo. En parlem i et passo un pressupost tancat.", "Lo que": "El que", "quieras": "vulguis", "Precio según": "Preu segons", "proyecto": "projecte", "Pide tu presupuesto": "Demana el teu pressupost", "¿Tienes un negocio o una idea?": "Tens un negoci o una idea?", "© 2026 Achraf · Webs para negocios · Barcelona": "© 2026 Achraf · Webs per a negocis · Barcelona", "Volver arriba ↑": "Tornar a dalt ↑"}, H={"servicios": "Serveis <span style=\"color: #9E1F24\">✦</span> Serveis <span style=\"color: #9E1F24\">✦</span> Serveis", "hablamos": "P<span style=\"color: #B3262B\">a</span>rl<span style=\"color: #B3262B\">e</span>m?"}, orig=new Map(), htmlOrig=new Map();
+var nodes=[];var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);var n;
+while((n=w.nextNode())){var p=n.parentElement;if(!p||p.closest('[data-i18n-html],script,style'))continue;var t=n.nodeValue.trim();if(T[t]!==undefined){nodes.push(n);orig.set(n,n.nodeValue)}}
+document.querySelectorAll('[data-i18n-html]').forEach(function(e){htmlOrig.set(e,e.innerHTML)});
+var titles={es:document.title,ca:'Achraf — Webs per a negocis'};
+function set(l){nodes.forEach(function(n){var o=orig.get(n);n.nodeValue=l==='ca'?o.replace(o.trim(),T[o.trim()]):o});
+document.querySelectorAll('[data-i18n-html]').forEach(function(e){e.innerHTML=l==='ca'?H[e.getAttribute('data-i18n-html')]:htmlOrig.get(e)});
+document.documentElement.lang=l;document.title=titles[l];
+document.querySelectorAll('.langsw button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l?'true':'false')});
+try{localStorage.setItem('ach-lang',l)}catch(e){}}
+document.querySelectorAll('.langsw button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l)})});
+var q=new URLSearchParams(location.search).get('lang'),st=null;try{st=localStorage.getItem('ach-lang')}catch(e){}
+var l=(q==='ca'||q==='es')?q:(st||((navigator.language||'').toLowerCase().indexOf('ca')===0?'ca':'es'));if(l==='ca')set('ca');
+})();
+</script>
 </body>
 </html>
